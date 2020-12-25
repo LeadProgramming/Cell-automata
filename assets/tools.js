@@ -136,6 +136,7 @@ function cella_ant(rctx) {
   //stops at a specific index.
   let stopping = 100;
   let idx = 0;
+  let counter = document.body.querySelector("#counter");
   //initialize environment.
   initState();
 
@@ -145,7 +146,6 @@ function cella_ant(rctx) {
   document.body.querySelector(".step-btn").addEventListener('click', step);
   document.body.querySelector(".pause-btn").addEventListener('click', pause);
   document.body.querySelector(".reset-btn").addEventListener('click', reset);
-  
   function initState() {
     //resets the environment.
     dir = 0;
@@ -157,7 +157,7 @@ function cella_ant(rctx) {
     playback = null;
     rate = 1000;
     mode = 0;
-    stopping = 999999999;
+    stopping = 42595;
     idx = 0;
     for (let i = 0; i < 41; i++) {
       table[i] = [];
@@ -168,7 +168,7 @@ function cella_ant(rctx) {
     table[x][y] = 0;
     draw_rect(rctx, table[x][y], rpx, rpy);
     draw_triangle(rctx, dir, rpx, rpy);
-
+    counter.innerHTML = 0;
   }
 
   function reset() {
@@ -268,6 +268,7 @@ function cella_ant(rctx) {
     table[x][y]++;
     draw_triangle(rctx, dir, rpx, rpy);
     idx++;
+    counter.innerHTML = idx;
   }
 
 }
