@@ -1,4 +1,4 @@
-![cell_anim.gif](https://www.dropbox.com/s/lrq02a098lhyjv0/cell_anim.gif?dl=0&raw=1) 
+![cell_anim.gif](https://github.com/LeadProgramming/Cell_automata/blob/main/cell_anim.gif?raw=true) 
 # Cellular Automa Ant #12
 
 Welcome to Cella Ant #12. This algorithm uses a LLRR traversal. 
