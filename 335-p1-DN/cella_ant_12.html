@@ -1,0 +1,64 @@
+<!-- Name: David Nguyen (891362089)
+     Email: vietcloudx@csu.fullerton.edu
+     Class: CPSC 335-05
+     Completion date: 9/25/19
+     Project: Cella Ant 12
+     Project #: 1
+     Module Details: This file creates the foundation of the project by creating a canvas for the algorithm to run on and it acts as the main (client).
+-->
+<!doctype html>
+<html>
+
+<head>
+  <title>Project #1 - Cella Ant 12 - David Nguyen</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+
+<body>
+  <h1>Cella Ant 12 is running.</h1>
+  <h4>Time-stamp: <2019-09-13 16:38:03 David Nguyen>
+  </h4>
+
+  <canvas id="grid" width="820" height="620"></canvas>
+  <div id="controller">
+    <label for="rates">Playback speed: </label>
+    <select name="rates" id="rates">
+      <option value="0.9765625">1024x</option>
+      <option value="1.953125">512x</option>
+      <option value="3.90625">256x</option>
+      <option value="7.8125">128x</option>
+      <option value="15.625">64x</option>
+      <option value="31.25">32x</option>
+      <option value="62.5">16x</option>
+      <option value="125">8x</option>
+      <option value="250">4x</option>
+      <option value="333">3x</option>
+      <option value="500">2x</option>
+      <option value="666">1.5x</option>
+      <option value="1000" selected>1x</option>
+      <option value="2000">0.5x</option>
+      <option value="4000">0.25x</option>
+    </select>
+
+    <button class="play-btn">play</button>
+    <button class="step-btn">step</button>
+    <button class="pause-btn">pause</button>
+    <button class="reset-btn">reset</button>
+  </div>
+
+</body>
+<script src="../assets/tools.js">
+</script>
+<script>
+  //Each box in the grid is 20x20 pixel.
+  // ================== cella_ant ======================  
+  // Cella Ant #12.
+  // =====================  Main =========================  
+  var canvas = document.getElementById("grid");
+  var context = canvas.getContext("2d");
+  // Draw a grid
+  draw_grid(context, 20, 50, 'white', 'yellow');
+  cella_ant(context);
+</script>
+
+</html>
